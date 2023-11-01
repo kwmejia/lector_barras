@@ -43,7 +43,14 @@ const BarcodeScanner: React.FC<BarcodeScannerProps> = ({ onDetected }) => {
       };
     }
   }, [onDetected]);
-  return <Webcam ref={webcamRef as any} />;
+  return (
+    <Webcam
+      ref={webcamRef as any}
+      videoConstraints={{
+        facingMode: 'environment'
+      }}
+    />
+  );
 };
 
 export default BarcodeScanner;
