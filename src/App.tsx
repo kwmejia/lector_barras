@@ -3,7 +3,7 @@ import BarcodeScanner from './components/BarcodeScanner';
 
 const App: React.FC = () => {
 
-  const [codigos, setCodigos] = useState()
+  const [codigos, setCodigos] = useState("sad")
   const handleBarcodeDetected = (code: string) => {
     console.log("Código de barras detectado:", code);
     // Aquí puedes procesar el código de barras, guardar en un estado, enviar a un servidor, etc.
